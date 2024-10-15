@@ -3,3 +3,7 @@ repos:
     rev: 5.13.2
     hooks:
       - id: isort
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.18.0
+    hooks:
+      - id: pyupgrade

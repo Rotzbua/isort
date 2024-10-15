@@ -21,7 +21,7 @@ def git_clone(repository_url: str, directory: Path):
     check_call(["git", "clone", "--depth", "1", repository_url, str(directory)])
 
 
-def run_isort(arguments: Generator[str, None, None] | Sequence[str]):
+def run_isort(arguments: Generator[str] | Sequence[str]):
     """Runs isort in diff and check mode with the given arguments"""
     main(["--check-only", "--diff", *arguments])
 
